@@ -1,19 +1,28 @@
+//variables to target specific parts of the HTML
+var dateInput = $("#expiration-date");
+var ingredientInput = document.getElementById("food-stuffs");
+
 
 //when ingredient input is filled out, and user clicks "check fridge"
 //this code will save the input into local storage.
 $("#check-fridge").click(function(){
     event.preventDefault();
-    console.log("does this thing work?")
-    ingredientInputArray=[]
-    var ingredientInput = document.getElementById("food-stuffs");
-    localStorage.setItem("food", ingredientInput.value);
-    $("#food-stuffs").text(" ")
-})
 
+    //if fields are not filled out. then stop.
+    if($("#expiration-date").val("") || $("#food-stuffs").val("")){
+        
+    }else{
+    
+    //code to save food and date to locaStorage.
+    localStorage.setItem("food", ingredientInput.value);
+    localStorage.setItem("Expiration Date", dateInput.value);
+    $("#expiration-date").val(" ");
+    $("#food-stuffs").val(" ")
+    }
+})
 
 //expiration date input was clicked.
 $("#expiration-date").on("click", function(){
-    var dateInput = $("#expiration-date");
     
     //enables jquery datepicker.
     dateInput.datepicker({
