@@ -10,12 +10,13 @@ $("#check-fridge").click(function(){
     
     //code to save food and date to locaStorage.
     localStorage.setItem("food", ingredientInput.value);
-    localStorage.setItem("Expiration Date", dateInput.value);
-    $("#expiration-date").val(" ");
+    //localStorage.setItem("Expiration Date", dateInput.value);
+    //$("#expiration-date").val(" ");
     $("#food-stuffs").val(" ")
     
 })
 
+/*
 //expiration date input was clicked.
 $("#expiration-date").on("click", function(){
     
@@ -31,5 +32,5 @@ $("#expiration-date").on("click", function(){
     //automatically brings up calendar.
     dateInput.trigger("focus");
 })
-
+*/
 
