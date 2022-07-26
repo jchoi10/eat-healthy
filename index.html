@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eationary HomePage</title>
 </head>
 <body>
     <div class="row">
         <header>
             <nav>
                 <div class="pink col s12">
-                  <a href="#" class="pink"><h1>EATionary</h1></a>
+                  <a href="#" class="pink center"><h1>EATionary</h1></a>
                   <ul id="nav-mobile" class="right">
-                    <li><a>Homepage</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Recipes</a></li>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="fridge.html">My Fridge</a></li>
+                    <li><a href="recipe.html">Recipes</a></li>
                   </ul>
                 </div>
             </nav>
@@ -26,12 +27,19 @@
         <form class="col s12 m2 offset-m5">
             
                 <label for="ingredient">Type Ingredient Here</label>
-                <input type="text" placeholder="ingredient" name="ingredient">
+                <input id="food-stuffs" type="text" name="ingredient">
                 <label for="expiration">Type Expiration Date Here</label>
-                <input type="text" placeholder="Expiration Date" name="expiration"/>
-                <button type="submit" class="btn waves-effect waves-light pink text-white">Check Fridge</button>
+                <input type="text" id="expiration-date" name="expiration"/>
+                <button type="submit" class="btn waves-effect waves-light pink text-white" id="check-fridge">Check Fridge</button>
         </form>
     </div>
-    
+    <!--error div. when someone doesn't fill out form, this should show up-->
+    <div class="row">
+        <div class ="col s12 m2 offset-m5"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>    
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
