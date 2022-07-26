@@ -34,6 +34,7 @@ $("#expiration-date").on("click", function(){
 })
 */
 
+<<<<<<< HEAD
 // let call1 = null
 // fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2&apiKey=873c6628dea5448a91cb72febe1f297e')
 // .then(res => {
@@ -111,3 +112,5 @@ function displayImage (image) {
     var detailImageViewer = $('#detail-image-viewer');
     detailImageViewer.attr('src',image);
 }
+=======
+>>>>>>> 6c3122dcc09409471158671f9f4b9dcb0257dbf4
