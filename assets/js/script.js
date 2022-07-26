@@ -35,7 +35,7 @@ function createButton (menu) {
 };
 
 var recipeListUrl = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients=' +
-            urlParams.get('ingredient') + '&number=2&apiKey=873c6628dea5448a91cb72febe1f297e'
+            urlParams.get('ingredient') + '&number=4&apiKey=873c6628dea5448a91cb72febe1f297e'
 
 fetch(recipeListUrl)
 //fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2&apiKey=873c6628dea5448a91cb72febe1f297e')
