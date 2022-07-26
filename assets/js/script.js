@@ -34,7 +34,6 @@ $("#expiration-date").on("click", function(){
 })
 */
 
-<<<<<<< HEAD
 // let call1 = null
 // fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2&apiKey=873c6628dea5448a91cb72febe1f297e')
 // .then(res => {
@@ -72,10 +71,10 @@ function createButton (menu) {
 };
 
 var recipeListUrl = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients=' +
-            urlParams.get('ingredient') + '&number=4&apiKey=873c6628dea5448a91cb72febe1f297e'
+            urlParams.get('ingredient') + '&number=5&apiKey=873c6628dea5448a91cb72febe1f297e'
 
 fetch(recipeListUrl)
-//fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2&apiKey=873c6628dea5448a91cb72febe1f297e')
+//fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=5&apiKey=873c6628dea5448a91cb72febe1f297e')
 .then(res => {
     return res.json()
 })
@@ -112,5 +111,3 @@ function displayImage (image) {
     var detailImageViewer = $('#detail-image-viewer');
     detailImageViewer.attr('src',image);
 }
-=======
->>>>>>> 6c3122dcc09409471158671f9f4b9dcb0257dbf4
