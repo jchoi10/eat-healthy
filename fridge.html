@@ -12,30 +12,39 @@
     <div class="row">
         <header>
             <nav>
-                <div class="pink col s12">
-                  <a href="#" class="pink"><h1>EATionary</h1></a>
 
-                  <h5 class="center class-logo">My Fridge</h5>
+                <div class="pink col s12">
+                  <a href="#" class="pink center"><h1>EATionary</h1></a>
+
                   <ul id="nav-mobile" class="right">
                     <li><a href="index.html">Homepage</a></li>
                     <li><a href="fridge.html">My Fridge</a></li>
                     <li><a href="recipe.html">Recipes</a></li>
                   </ul>
                 </div>
-                <div>
-                    <form action="berries">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </form>
-                </div>
-                <div>
-                    <form id="user-form" >
+
+
+                <div class="container">
+                        <div class="row">
+                            <div class="col s3 card-panel teal lighten-2 center align">Chicken</div>
+                            <div class="col s3 card-panel teal lighten-2 center align">Cherries</div>
+                            <div class="col s3 card-panel teal lighten-2 center align">Scallions</div>
+                            <div class="col s3 card-panel teal lighten-2 center align">Rainsins</div>
+                            <div class="col s3 card-panel teal lighten-2 center align">Kale</div>
+                            <div class="col s3 card-panel teal lighten-2 center align">Chives</div>
+                            <div class="col s3 card-panel teal lighten-2 center align">Chives</div>
+                            <div class="col s3 card-panel teal lighten-2 center align">Chives</div>
+
+                    </div>
+                    <form action="user-form" >
                         <input name="ingredient" id="ingredient" type="text" autofocus="true" class="form-input" />
-                        <button type="submit" class="btn">Find Recipe</button>
-                      </form>
+                        <button type="submit" class="btn waves-effect waves-light pink text-white" id="find-recipe" >Find Recipe</button>
+                    </form>
                 </div>
             </nav>
             </header>
     </div>
-
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/fridge.js"></script>
 </body>
 </html>
