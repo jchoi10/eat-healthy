@@ -34,6 +34,7 @@ $("#expiration-date").on("click", function(){
 })
 */
 
+// Example code to connect to multiple APIs
 // let call1 = null
 // fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2&apiKey=873c6628dea5448a91cb72febe1f297e')
 // .then(res => {
