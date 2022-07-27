@@ -6,44 +6,33 @@ var ingredientInput = document.getElementById("food-stuffs");
 //when ingredient input is filled out, and user clicks "check fridge"
 //this code will save the input into local storage.
 $("#check-fridge").click(function(){
+
     event.preventDefault();
     if(localStorage.getItem("food")){
         var foodList = localStorage.getItem("food")
         foodList += (","+ingredientInput.value)
         console.log(foodList)
     }
-    //code to save food and date to locaStorage.
-    localStorage.setItem("food", foodList);
-    //localStorage.setItem("Expiration Date", dateInput.value);
-    //$("#expiration-date").val(" ");
-    $("#food-stuffs").val(" ")
+     localStorage.setItem("food", foodList);
+    //clears text in the #food-stuffs input field.
+     $("#food-stuffs").val(" ")
+    location.replace("fridge.html")
     
 })
 
-/*
-//expiration date input was clicked.
-$("#expiration-date").on("click", function(){
-    
-    //enables jquery datepicker.
-    dateInput.datepicker({
-        minDate: 1,
-        onClose: function(){
-            //when calenddar is closed, updates the date.
-            $(this).trigger("change")
-        }
-    })
-    
-    //automatically brings up calendar.
-    dateInput.trigger("focus");
-})
-*/
 var recipeIngredients = document.getElementById("ingredientInput");
 
 $("#find-recipe").click(function(event){
     event.preventDefault();
     console.log(recipeIngredients.value)
-    debugger
+    //debugger
     localStorage.setItem("final-ingredient", recipeIngredients.value);
     $("#ingredientInput").val(" ")
     location.replace("recipe.html")
 })
+
+//code to get a random number that will be used with the Rick And Morty API to get a random image to load
+//everytime the page loads.
+
+var randomNumber = Math.floor(Math.random()*826)+1
+console.log("the random number is "+randomNumber);
