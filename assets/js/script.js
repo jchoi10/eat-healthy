@@ -7,9 +7,13 @@ var ingredientInput = document.getElementById("food-stuffs");
 //this code will save the input into local storage.
 $("#check-fridge").click(function(){
     event.preventDefault();
-    
+    if(localStorage.getItem("food")){
+        var foodList = localStorage.getItem("food")
+        foodList += (" "+ingredientInput.value)
+        console.log(foodList)
+    }
     //code to save food and date to locaStorage.
-    localStorage.setItem("food", ingredientInput.value);
+    localStorage.setItem("food", foodList);
     //localStorage.setItem("Expiration Date", dateInput.value);
     //$("#expiration-date").val(" ");
     $("#food-stuffs").val(" ")
