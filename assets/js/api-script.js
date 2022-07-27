@@ -27,7 +27,7 @@
 
 
 
-var urlParams = new URLSearchParams(window.location.search);
+// var urlParams = new URLSearchParams(window.location.search);
 
 var recipeNames = $('#recipe-names');
 // var menus = ['ramen', 'pasta', 'bap'];
@@ -38,9 +38,10 @@ function createButton (menu) {
     btn1.innerText = menu;
     return btn1
 };
+var usedIngredient = localStorage.getItem('final-ingredient')
 
 var recipeListUrl = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients=' +
-            urlParams.get('ingredient') + '&number=2&apiKey=873c6628dea5448a91cb72febe1f297e'
+            usedIngredient + '&number=2&apiKey=873c6628dea5448a91cb72febe1f297e'
 
 fetch(recipeListUrl)
 //fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2&apiKey=873c6628dea5448a91cb72febe1f297e')
