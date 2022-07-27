@@ -27,7 +27,7 @@
 
 
 
-// var urlParams = new URLSearchParams(window.location.search);
+// var urlParams = new URLSearchParams(window.location.search); urlParams.get('ingredient')
 
 var recipeNames = $('#recipe-names');
 // var menus = ['ramen', 'pasta', 'bap'];
