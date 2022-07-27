@@ -33,7 +33,7 @@ var recipeNames = $('#recipe-names');
 
 function createButton (menu) {
     var btn1 = document.createElement('button');
-    btn1.classList.add('pink', 'text-white');
+    btn1.classList.add('btn','pink', 'text-white');
     btn1.innerText = menu;
     return btn1
 };
