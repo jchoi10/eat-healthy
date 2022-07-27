@@ -41,6 +41,8 @@ var recipeIngredients = document.getElementById("ingredientInput");
 
 $("#find-recipe").click(function(event){
     event.preventDefault();
+    console.log(recipeIngredients.value)
+    debugger
     localStorage.setItem("final-ingredient", recipeIngredients.value);
     $("#ingredientInput").val(" ")
     location.replace("recipe.html")
