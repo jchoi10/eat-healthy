@@ -9,7 +9,7 @@ $("#check-fridge").click(function(){
     event.preventDefault();
     if(localStorage.getItem("food")){
         var foodList = localStorage.getItem("food")
-        foodList += (" "+ingredientInput.value)
+        foodList += (","+ingredientInput.value)
         console.log(foodList)
     }
     //code to save food and date to locaStorage.
