@@ -37,4 +37,11 @@ $("#expiration-date").on("click", function(){
     dateInput.trigger("focus");
 })
 */
+var recipeIngredients = document.getElementById("ingredientInput");
 
+$("#find-recipe").click(function(event){
+    event.preventDefault();
+    localStorage.setItem("final-ingredient", recipeIngredients.value);
+    $("#ingredientInput").val(" ")
+    location.replace("recipe.html")
+})
