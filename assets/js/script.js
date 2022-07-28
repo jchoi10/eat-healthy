@@ -5,47 +5,36 @@ var ingredientInput = document.getElementById("food-stuffs");
 
 //when ingredient input is filled out, and user clicks "check fridge"
 //this code will save the input into local storage.
-$("#check-fridge").click(function(){
+$("#check-fridge").click(function(event){
+
     event.preventDefault();
     if(localStorage.getItem("food")){
         var foodList = localStorage.getItem("food")
         foodList += (","+ingredientInput.value)
         console.log(foodList)
     }
-    //code to save food and date to locaStorage.
-    localStorage.setItem("food", foodList);
-    //localStorage.setItem("Expiration Date", dateInput.value);
-    //$("#expiration-date").val(" ");
-    $("#food-stuffs").val(" ")
+     localStorage.setItem("food", foodList);
+    //clears text in the #food-stuffs input field.
+     $("#food-stuffs").val(" ")
+    //location.replace("fridge.html")
     
 })
 
-/*
-//expiration date input was clicked.
-$("#expiration-date").on("click", function(){
-    
-    //enables jquery datepicker.
-    dateInput.datepicker({
-        minDate: 1,
-        onClose: function(){
-            //when calenddar is closed, updates the date.
-            $(this).trigger("change")
-        }
-    })
-    
-    //automatically brings up calendar.
-    dateInput.trigger("focus");
-})
-*/
 var recipeIngredients = document.getElementById("ingredientInput");
 
 $("#find-recipe").click(function(event){
     event.preventDefault();
+<<<<<<< HEAD
+=======
+    console.log(recipeIngredients.value)
+    //debugger
+>>>>>>> 317f4b508756191f260c9e347db74d4461b46df0
     localStorage.setItem("final-ingredient", recipeIngredients.value);
     $("#ingredientInput").val(" ")
     location.replace("recipe.html")
 })
 
+<<<<<<< HEAD
 var entryImage = $(#front-image-view)
 
 
@@ -78,3 +67,39 @@ function frontImage (image) {
     var frontImageViewer = $('#front-image-view');
     frontImageViewer.attr('src',image);
 }
+=======
+//code to get a random number that will be used with the Rick And Morty API to get a random image to load
+//everytime the page loads.
+
+var randomNumber = Math.floor(Math.random()*826)+1
+console.log("the random number is "+randomNumber);
+var rickAndMortyApiUrl= "https://rickandmortyapi.com/api/character/"+randomNumber;
+
+//making a request to the API url.
+fetch(rickAndMortyApiUrl).then(function(response){
+    if(response.ok){response.json().then(function(character){
+        console.log(character);
+        var pictureFrame = document.createElement('div');
+        document.querySelector("#rick").appendChild(pictureFrame);
+        let rickImage=document.createElement('img');
+        rickImage.src=character.image;
+        pictureFrame.appendChild(rickImage);
+
+    })
+
+    }else{
+        //if the server is down, or there is a problem with fetching, using DOMs this will create a div with a message inside it that tells the user an error has occured.
+        var errorFrame=document.createElement('div');
+        var errorMessage=document.createTextNode("Something Went Sideways at the Server, Sorry!")
+        errorFrame.appendChild(errorMessage);
+        document.body.appendChild(errorFrame);
+    }
+})
+
+//using DOMs, following code will create a div, and image. then it will append image to div, then append the div to html body.
+//var pictureFrame = document.createElement('div');
+//document.body.appendChild(pictureFrame);
+//let rickImage=document.createElement('img');
+//rickImage.src="https://rickandmortyapi.com/api/character/avatar/"+randomNumber+".jpeg";
+//pictureFrame.appendChild(rickImage);
+>>>>>>> 317f4b508756191f260c9e347db74d4461b46df0
