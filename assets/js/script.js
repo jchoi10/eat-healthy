@@ -8,20 +8,22 @@ var ingredientInput = document.getElementById("food-stuffs");
 $("#check-fridge").click(function(event){
 
     event.preventDefault();
-    if(localStorage.getItem("food")){
-        var foodList = localStorage.getItem("food")
-        foodList += (","+ingredientInput.value)
-        console.log(foodList)
-    }else{
-        foodList=ingredientInput.value
+    var foodList = localStorage.getItem("food");
+
+    if(foodList){
+        foodList += (","+ingredientInput.value);
+        console.log(foodList);
     }
-     localStorage.setItem("food", foodList);
+    else {
+        foodList = ingredientInput.value
+    }
+    localStorage.setItem("food", foodList);
     //clears text in the #food-stuffs input field.
      $("#food-stuffs").val(" ")
-    //location.replace("fridge.html")
-    
+    //location.replace("fridge.html") 
 })
 
+// code for My Fridge Page
 var recipeIngredients = document.getElementById("ingredientInput");
 
 $("#find-recipe").click(function(event){
