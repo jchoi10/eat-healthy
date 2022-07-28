@@ -91,6 +91,10 @@ for (var i = 0; i<ingredientGroup.length; i++) {
 var beforerecipeIngredient = $('#ingredientInput')
 
 $(foodNames).on('click', function(event) {
-    console.log(event.target.textContent)
-    beforerecipeIngredient.append(event.target.textContent)
+    // console.log(event.target.textContent)
+    // beforerecipeIngredient.val(pickIngredient);
+    var lastIngredients = beforerecipeIngredient.val().split(",");
+    lastIngredients.push(event.target.textContent);
+    beforerecipeIngredient.val(lastIngredients.join(","))
+    console.log(lastIngredients)
 })
