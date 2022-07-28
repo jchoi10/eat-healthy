@@ -71,22 +71,28 @@ fetch(rickAndMortyApiUrl).then(function(response){
 */
 
 var foodNames = $('#forFridgeFood');
-var fridgeFood = localStorage.getItem("food");
 
-console.log(fridgeFood)
+var fridgeFood = localStorage.getItem("food");
 
 const ingredientGroup = fridgeFood.split(", ")
 
-console.log(ingredientGroup)
+function makeButton (list) {
+    var btn2 = document.createElement('button');
+    btn2.classList.add('btn','pink', 'text-white');
+    btn2.setAttribute("id", "magic-food")
+    btn2.innerText = list;
+    return btn2
+};
 
-function buttonMaker () {
-    for (var i = 0; i<ingredientGroup.length; i++) {
-        var btn1 = document.createElement('button');
-        btn1.classList.add('btn','pink', 'text-white');
-        btn1.innerText = ingredientGroup[i];
-        return btn1
-    }
+for (var i = 0; i<ingredientGroup.length; i++) {
+    var newIngredient = makeButton(ingredientGroup[i])
+    foodNames.append(newIngredient);
 }
 
-var finalButton = buttonMaker ()
-foodNames.append(finalButton);
+// $(btn1=2).on('click', function() {
+//     displayDetails(res.summary); 
+//     displayImage(image);
+// })
+
+// var finalFoodInputEl = document.getElementById('magic-food').textContent
+// console.log(finalFoodInputEl)
