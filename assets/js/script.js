@@ -5,7 +5,7 @@ var ingredientInput = document.getElementById("food-stuffs");
 
 //when ingredient input is filled out, and user clicks "check fridge"
 //this code will save the input into local storage.
-$("#check-fridge").click(function(event){
+$("#put-in-fridge").click(function(event){
 
     event.preventDefault();
     var foodList = localStorage.getItem("food");
@@ -21,6 +21,10 @@ $("#check-fridge").click(function(event){
     //clears text in the #food-stuffs input field.
      $("#food-stuffs").val(" ")
     //location.replace("fridge.html") 
+})
+$("#check-fridge").click(function(event){
+    event.preventDefault();
+    location.replace("fridge.html");
 })
 
 // code for My Fridge Page
@@ -62,10 +66,3 @@ fetch(rickAndMortyApiUrl).then(function(response){
         document.body.appendChild(errorFrame);
     }
 })
-
-//using DOMs, following code will create a div, and image. then it will append image to div, then append the div to html body.
-//var pictureFrame = document.createElement('div');
-//document.body.appendChild(pictureFrame);
-//let rickImage=document.createElement('img');
-//rickImage.src="https://rickandmortyapi.com/api/character/avatar/"+randomNumber+".jpeg";
-//pictureFrame.appendChild(rickImage);
