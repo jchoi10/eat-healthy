@@ -53,7 +53,9 @@
 - Why did you build this project? 
 This app could be a useful way to help use all the ingredients in the user’s fridge.
 - What problem does it solve?
+Hopefully, it'll help people use the food they have before it expires.
 - What did you learn?
+Learned how
 
 ## Table of Contents (Optional)
 
