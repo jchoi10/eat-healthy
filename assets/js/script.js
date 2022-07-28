@@ -43,7 +43,7 @@ fetch(rickAndMortyApiUrl).then(function(response){
     if(response.ok){response.json().then(function(character){
     console.log(character);
     var pictureFrame = document.createElement('div');
-    document.body.appendChild(pictureFrame);
+    document.querySelector("#rick").appendChild(pictureFrame);
     let rickImage=document.createElement('img');
     rickImage.src=character.image;
     pictureFrame.appendChild(rickImage);
