@@ -12,6 +12,8 @@ $("#check-fridge").click(function(event){
         var foodList = localStorage.getItem("food")
         foodList += (","+ingredientInput.value)
         console.log(foodList)
+    }else{
+        foodList=ingredientInput.value
     }
      localStorage.setItem("food", foodList);
     //clears text in the #food-stuffs input field.
@@ -58,10 +60,3 @@ fetch(rickAndMortyApiUrl).then(function(response){
         document.body.appendChild(errorFrame);
     }
 })
-
-//using DOMs, following code will create a div, and image. then it will append image to div, then append the div to html body.
-//var pictureFrame = document.createElement('div');
-//document.body.appendChild(pictureFrame);
-//let rickImage=document.createElement('img');
-//rickImage.src="https://rickandmortyapi.com/api/character/avatar/"+randomNumber+".jpeg";
-//pictureFrame.appendChild(rickImage);
