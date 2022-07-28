@@ -49,8 +49,9 @@
 
 ## Description
 
-- (What was your motivation?) All of us cooked more during COVID peak and lockdown. Even though the restrictions are lifted and possible to eat at a restaurant, people miss cooking and eating healthy. This app could be a useful way to help use all the ingredients in the user’s fridge.
+- (What was your motivation?) All of us cooked more during COVID peak and lockdown. Even though the restrictions are lifted and possible to eat at a restaurant, people miss cooking and eating healthy. 
 - Why did you build this project? 
+This app could be a useful way to help use all the ingredients in the user’s fridge.
 - What problem does it solve?
 - What did you learn?
 

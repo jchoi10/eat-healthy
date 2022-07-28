@@ -84,31 +84,6 @@ function makeButton (list) {
     return btn2
 };
 
-<<<<<<< HEAD
-var btn1 = document.createElement('button');
-btn1.classList.add('btn','pink', 'text-white');
-btn1.setAttribute("id", "magic-food-button")
-btn1Text=btn1.innerText;
-console.log("this is in the button"+btn1Text)
-function buttonMaker () {
-    for (var i = 0; i<ingredientGroup.length; i++) {
-        btn1
-        btn1.innerText = ingredientGroup[i];
-        console.log("this info is in the for loop "+ btn1.innerText)
-        return btn1;
-    }
-}
-
-var finalButton = buttonMaker ()
-foodNames.append(finalButton);
-var finalFoodInputEl = document.getElementById('magic-food-button').textContent
-console.log("this is the consolelog " +finalFoodInputEl)
-
-
-var buttonMeatEl = document.getElementById('ingredientInput').textContent="stuff";
-//document.getElementById('ingredientInput').appendChild(buttonMeatEl)
-
-=======
 for (var i = 0; i<ingredientGroup.length; i++) {
     var newIngredient = makeButton(ingredientGroup[i])
     foodNames.append(newIngredient);
@@ -121,4 +96,3 @@ $(btn2).on('click', function() {
 
 // var finalFoodInputEl = document.getElementById('magic-food').textContent
 // console.log(finalFoodInputEl)
->>>>>>> ab1c55ba38896c33d4487317fa453c27887d0a91
