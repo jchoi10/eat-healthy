@@ -89,10 +89,10 @@ for (var i = 0; i<ingredientGroup.length; i++) {
     foodNames.append(newIngredient);
 }
 
-// $(btn1=2).on('click', function() {
-//     displayDetails(res.summary); 
-//     displayImage(image);
-// })
+$(btn2).on('click', function() {
+    displayDetails(res.summary); 
+    displayImage(image);
+})
 
 // var finalFoodInputEl = document.getElementById('magic-food').textContent
 // console.log(finalFoodInputEl)
