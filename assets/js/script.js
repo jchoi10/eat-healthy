@@ -79,14 +79,26 @@ const ingredientGroup = fridgeFood.split(", ")
 
 console.log(ingredientGroup)
 
+var btn1 = document.createElement('button');
+btn1.classList.add('btn','pink', 'text-white');
+btn1.setAttribute("id", "magic-food-button")
+btn1Text=btn1.innerText;
+console.log("this is in the button"+btn1Text)
 function buttonMaker () {
     for (var i = 0; i<ingredientGroup.length; i++) {
-        var btn1 = document.createElement('button');
-        btn1.classList.add('btn','pink', 'text-white');
+        btn1
         btn1.innerText = ingredientGroup[i];
-        return btn1
+        console.log("this info is in the for loop "+ btn1.innerText)
+        return btn1;
     }
 }
 
 var finalButton = buttonMaker ()
 foodNames.append(finalButton);
+var finalFoodInputEl = document.getElementById('magic-food-button').textContent
+console.log("this is the consolelog " +finalFoodInputEl)
+
+
+var buttonMeatEl = document.getElementById('ingredientInput').textContent="stuff";
+//document.getElementById('ingredientInput').appendChild(buttonMeatEl)
+
