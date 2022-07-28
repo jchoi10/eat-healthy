@@ -37,11 +37,24 @@ $("#find-recipe").click(function(event){
 var randomNumber = Math.floor(Math.random()*826)+1
 console.log("the random number is "+randomNumber);
 var rickAndMortyApiUrl= "https://rickandmortyapi.com/api/character"
-
-//using DOM, following code will create a div, and an image, and append the image to the div.
-var pictureFrame = document.createElement('div');
+var finalApirUrl=  rickAndMortyApiUrl+"/avatar/"+randomNumber+".jpeg"
+//making a request to the API url.
+fetch(rickAndMortyApiUrl).then(function(response){
+    if(response.ok){response.json().then(function(){
+    var pictureFrame = document.createElement('div');
     document.body.appendChild(pictureFrame);
 
-let rickImage=document.createElement('img');
+    let rickImage=document.createElement('img');
     rickImage.src="https://rickandmortyapi.com/api/character/avatar/"+randomNumber+".jpeg";
     pictureFrame.appendChild(rickImage);
+
+    })
+
+    }else{
+        var errorFrame=document.createElement('div');
+        var errorMessage=document.createTextNode("Something Went Sideways at the Server, Sorry!")
+        errorFrame.appendChild(errorMessage);
+        document.body.appendChild(errorFrame);
+    }
+})
+
