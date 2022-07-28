@@ -46,6 +46,8 @@ var randomNumber = Math.floor(Math.random()*826)+1
 console.log("the random number is "+randomNumber);
 var rickAndMortyApiUrl= "https://rickandmortyapi.com/api/character/"+randomNumber;
 
+
+/*
 //making a request to the API url.
 fetch(rickAndMortyApiUrl).then(function(response){
     if(response.ok){response.json().then(function(character){
@@ -66,3 +68,4 @@ fetch(rickAndMortyApiUrl).then(function(response){
         document.body.appendChild(errorFrame);
     }
 })
+*/
