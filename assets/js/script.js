@@ -42,9 +42,9 @@ $("#find-recipe").click(function(event){
 //code to get a random number that will be used with the Rick And Morty API to get a random image to load
 //everytime the page loads.
 
-var randomNumber = Math.floor(Math.random()*826)+1
-console.log("the random number is "+randomNumber);
-var rickAndMortyApiUrl= "https://rickandmortyapi.com/api/character/"+randomNumber;
+//var randomNumber = Math.floor(Math.random()*826)+1
+//console.log("the random number is "+randomNumber);
+//var rickAndMortyApiUrl= "https://rickandmortyapi.com/api/character/"+randomNumber;
 
 
 /*
