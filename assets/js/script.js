@@ -45,3 +45,36 @@ $("#find-recipe").click(function(event){
     $("#ingredientInput").val(" ")
     location.replace("recipe.html")
 })
+
+var entryImage = $(#front-image-view)
+
+
+
+
+
+
+
+fetch('https://rickandmortyapi.com/api/character')
+.then(res => {
+    return res.json()
+})
+.then(res => {
+    console.log(res);
+})
+
+function ranNumber (min, max) {
+    return Math.floor(Math.random()*(max-min)) + min;
+}
+
+console.log(ranNumber(0,827))
+
+function showImage (image) {
+    // var imageURL = 'https://rickandmortyapi.com/api/character/avatar/' + ranNumber(0,827) + '.jpeg'
+    
+    frontImage(image)
+}
+
+function frontImage (image) {
+    var frontImageViewer = $('#front-image-view');
+    frontImageViewer.attr('src',image);
+}
