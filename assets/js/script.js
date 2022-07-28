@@ -5,7 +5,7 @@ var ingredientInput = document.getElementById("food-stuffs");
 
 //when ingredient input is filled out, and user clicks "check fridge"
 //this code will save the input into local storage.
-$("#check-fridge").click(function(event){
+$("#put-in-fridge").click(function(event){
 
     event.preventDefault();
     var foodList = localStorage.getItem("food");
@@ -21,6 +21,10 @@ $("#check-fridge").click(function(event){
     //clears text in the #food-stuffs input field.
      $("#food-stuffs").val(" ")
     //location.replace("fridge.html") 
+})
+$("#check-fridge").click(function(event){
+    event.preventDefault();
+    location.replace("fridge.html");
 })
 
 // code for My Fridge Page
@@ -38,10 +42,12 @@ $("#find-recipe").click(function(event){
 //code to get a random number that will be used with the Rick And Morty API to get a random image to load
 //everytime the page loads.
 
-var randomNumber = Math.floor(Math.random()*826)+1
-console.log("the random number is "+randomNumber);
-var rickAndMortyApiUrl= "https://rickandmortyapi.com/api/character/"+randomNumber;
+//var randomNumber = Math.floor(Math.random()*826)+1
+//console.log("the random number is "+randomNumber);
+//var rickAndMortyApiUrl= "https://rickandmortyapi.com/api/character/"+randomNumber;
 
+
+/*
 //making a request to the API url.
 fetch(rickAndMortyApiUrl).then(function(response){
     if(response.ok){response.json().then(function(character){
@@ -62,10 +68,31 @@ fetch(rickAndMortyApiUrl).then(function(response){
         document.body.appendChild(errorFrame);
     }
 })
+*/
 
-//using DOMs, following code will create a div, and image. then it will append image to div, then append the div to html body.
-//var pictureFrame = document.createElement('div');
-//document.body.appendChild(pictureFrame);
-//let rickImage=document.createElement('img');
-//rickImage.src="https://rickandmortyapi.com/api/character/avatar/"+randomNumber+".jpeg";
-//pictureFrame.appendChild(rickImage);
+var foodNames = $('#forFridgeFood');
+
+var fridgeFood = localStorage.getItem("food");
+
+const ingredientGroup = fridgeFood.split(", ")
+
+function makeButton (list) {
+    var btn2 = document.createElement('button');
+    btn2.classList.add('btn','pink', 'text-white');
+    btn2.setAttribute("id", "magic-food")
+    btn2.innerText = list;
+    return btn2
+};
+
+for (var i = 0; i<ingredientGroup.length; i++) {
+    var newIngredient = makeButton(ingredientGroup[i])
+    foodNames.append(newIngredient);
+}
+
+// $(btn1=2).on('click', function() {
+//     displayDetails(res.summary); 
+//     displayImage(image);
+// })
+
+// var finalFoodInputEl = document.getElementById('magic-food').textContent
+// console.log(finalFoodInputEl)
