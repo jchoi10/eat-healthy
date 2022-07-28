@@ -5,7 +5,7 @@ var ingredientInput = document.getElementById("food-stuffs");
 
 //when ingredient input is filled out, and user clicks "check fridge"
 //this code will save the input into local storage.
-$("#check-fridge").click(function(event){
+$("#put-in-fridge").click(function(event){
 
     event.preventDefault();
     var foodList = localStorage.getItem("food");
@@ -21,6 +21,10 @@ $("#check-fridge").click(function(event){
     //clears text in the #food-stuffs input field.
      $("#food-stuffs").val(" ")
     //location.replace("fridge.html") 
+})
+$("#check-fridge").click(function(event){
+    event.preventDefault();
+    location.replace("fridge.html");
 })
 
 // code for My Fridge Page
