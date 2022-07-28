@@ -28,12 +28,6 @@ var recipeIngredients = document.getElementById("ingredientInput");
 
 $("#find-recipe").click(function(event){
     event.preventDefault();
-<<<<<<< HEAD
-    localStorage.setItem("final-ingredient", recipeIngredients.value);
-    $("#ingredientInput").val(" ")
-    location.replace("recipe.html")
-})
-=======
     console.log(recipeIngredients.value)
     //debugger
     localStorage.setItem("final-ingredient", recipeIngredients.value);
@@ -75,4 +69,3 @@ fetch(rickAndMortyApiUrl).then(function(response){
 //let rickImage=document.createElement('img');
 //rickImage.src="https://rickandmortyapi.com/api/character/avatar/"+randomNumber+".jpeg";
 //pictureFrame.appendChild(rickImage);
->>>>>>> develop
