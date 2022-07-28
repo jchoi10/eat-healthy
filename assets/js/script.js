@@ -36,3 +36,12 @@ $("#find-recipe").click(function(event){
 
 var randomNumber = Math.floor(Math.random()*826)+1
 console.log("the random number is "+randomNumber);
+var rickAndMortyApiUrl= "https://rickandmortyapi.com/api/character"
+
+//using DOM, following code will create a div, and an image, and append the image to the div.
+var pictureFrame = document.createElement('div');
+    document.body.appendChild(pictureFrame);
+
+let rickImage=document.createElement('img');
+    rickImage.src="https://rickandmortyapi.com/api/character/avatar/"+randomNumber+".jpeg";
+    pictureFrame.appendChild(rickImage);
