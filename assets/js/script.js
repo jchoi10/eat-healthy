@@ -91,6 +91,7 @@ for (var i = 0; i<ingredientGroup.length; i++) {
 var beforerecipeIngredient = $('#ingredientInput')
 
 $(foodNames).on('click', function(event) {
+
     // console.log(event.target.textContent)
     // beforerecipeIngredient.val(pickIngredient);
     var lastIngredients = beforerecipeIngredient.val().split(",");
@@ -98,3 +99,4 @@ $(foodNames).on('click', function(event) {
     beforerecipeIngredient.val(lastIngredients.join(","))
     console.log(lastIngredients)
 })
+
