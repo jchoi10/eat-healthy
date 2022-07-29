@@ -94,9 +94,9 @@ $(foodNames).on('click', function(event) {
 
     // console.log(event.target.textContent)
     // beforerecipeIngredient.val(pickIngredient);
-    var lastIngredients = beforerecipeIngredient.val().split(",");
+    var lastIngredients = beforerecipeIngredient.val().split(",").filter(element=>element!=="");
     lastIngredients.push(event.target.textContent);
     beforerecipeIngredient.val(lastIngredients.join(","))
+    // lastIngredients.shift()
     console.log(lastIngredients)
 })
-
